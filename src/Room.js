@@ -1,0 +1,35 @@
+import React, { useState } from 'react';
+//import logo from './logo.svg';
+//import './App.css';
+
+function Room() {
+    const [isLit, setLit] = useState(true); ////destructuring, useState returns array with 2 elements, one is boolean value and other is funtion to change boolean value
+    //const state = useState(true); ////same as above statement, useState returns an array
+    //console.log("State = ", state); ////confirm above useState returns array, check in console log
+    let [age, setAge] = useState(0);
+    function updateLit() {
+        console.log("Button Clicked");
+        //isLit = !isLit; ////wrong, it will be updated but not UI, previously we have to update UI manually, but now UI Libraries: reace, vue, angular provide us this facility automatically using setLit function
+        setLit(!isLit);
+    }
+    ////**below is arrow funtion just like updateLit(), you could put that arrow function complete code in button onClick location
+    //const increaseAge = () => {
+    //    setAge(++age);
+    //}
+    //above arrow function is given as single line code in increment button onClick function
+
+    return (
+        <div>
+            This room is: <u>{isLit? "Lit": "Dark"}</u> and the owner of room has age <u>{age}</u>
+            <br/>
+            <br/>
+            <button onClick={updateLit}>Toggle Light</button>
+            <br/>
+            <br/>
+            <button onClick={() => setAge(++age)}>
+                Increment Age</button>
+        </div>
+    );
+}
+
+export default Room;
