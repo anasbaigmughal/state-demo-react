@@ -22,6 +22,7 @@ function Room() {
     ////<div className= "room dark"> ////to use two calsses at once
     ////className= {"room "+(isLit?"lit": "dark")}  //old style, new style is template string with $ sign as used below
     ////<div className= {`room ${isLit?"lit": "dark"}`}> //new style //**this is not single quote behind room
+    ////if two strings with dynamic value in between then there are three styles< single quote< doouble quote and `hello ${anyFunction} world`; // anyFunction is dynamic value
     return (
         <div className= {`room ${isLit?"lit": "dark"}`}>
             This room is: <u>{isLit? "Lit": "Dark"}</u> and the owner of room has age <u>{age}</u>
