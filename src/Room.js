@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 //import logo from './logo.svg';
 //import './App.css';
+import './Room.css'
 
 function Room() {
-    const [isLit, setLit] = useState(true); ////destructuring, useState returns array with 2 elements, one is boolean value and other is funtion to change boolean value
+    const [isLit, setLit] = useState(false); ////destructuring, useState returns array with 2 elements, one is boolean value and other is funtion to change boolean value
     //const state = useState(true); ////same as above statement, useState returns an array
     //console.log("State = ", state); ////confirm above useState returns array, check in console log
     let [age, setAge] = useState(0);
@@ -16,10 +17,13 @@ function Room() {
     //const increaseAge = () => {
     //    setAge(++age);
     //}
-    //above arrow function is given as single line code in increment button onClick function
+    ////above arrow function is given as single line code in increment button onClick function
 
+    ////<div className= "room dark"> ////to use two calsses at once
+    ////className= {"room "+(isLit?"lit": "dark")}  //old style, new style is template string with $ sign as used below
+    ////<div className= {`room ${isLit?"lit": "dark"}`}> //new style //**this is not single quote behind room
     return (
-        <div>
+        <div className= {`room ${isLit?"lit": "dark"}`}>
             This room is: <u>{isLit? "Lit": "Dark"}</u> and the owner of room has age <u>{age}</u>
             <br/>
             <br/>
