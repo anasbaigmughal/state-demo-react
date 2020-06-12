@@ -5,9 +5,7 @@ import Room from './Room'
 
 function App() {
   return (
-    <app>
-      <Room></Room>
-    </app>
+    <Room></Room>
   );
 }
 
