@@ -25,6 +25,9 @@ function Room() {
     ////if two strings with dynamic value in between then there are three styles< single quote< doouble quote and `hello ${anyFunction} world`; // anyFunction is dynamic value
     return (
         <div className= {`room ${isLit?"lit": "dark"}`}>
+            <br/>
+            <strong>Room 1:</strong>
+            <br/><br/>
             This room is: <u>{isLit? "Lit": "Dark"}</u> and the owner of room has age <u>{age}</u>
             <br/>
             <br/>
@@ -33,6 +36,7 @@ function Room() {
             <br/>
             <button onClick={() => setAge(++age)}>
                 Increment Age</button>
+                <br/><br/>
         </div>
     );
 }

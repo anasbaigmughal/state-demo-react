@@ -1,6 +1,6 @@
 
 .room {
-    height: 100vh; /*this means that it will cover whole page*/
+    height: 100%; /*this means that it will cover not the whole page*/
 }
 
 .lit {
