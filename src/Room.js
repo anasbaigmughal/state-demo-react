@@ -7,7 +7,7 @@ function Room() {
     const [isLit, setLit] = useState(false); ////destructuring, useState returns array with 2 elements, one is boolean value and other is funtion to change boolean value
     //const state = useState(true); ////same as above statement, useState returns an array
     //console.log("State = ", state); ////confirm above useState returns array, check in console log
-    let [age, setAge] = useState(0);
+    let [age, setAge] = useState(20);
     function updateLit() {
         console.log("Button Clicked");
         //isLit = !isLit; ////wrong, it will be updated but not UI, previously we have to update UI manually, but now UI Libraries: reace, vue, angular provide us this facility automatically using setLit function
